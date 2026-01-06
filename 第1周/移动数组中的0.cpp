@@ -2,7 +2,7 @@
 using namespace std;
 //巧用双指针解决(既可编写算法函数，也可放在主函数中)
 //对于执行操作而不返回结果的函数，使用void类型(主函数main类型为int，返回结果为0(正常)或1(异常))
-//形参a[]即使标明了元素个数也不生效，数组形参实际上传入的是一个指向首个元素的指针
+//数组形参a[]即使标明了元素个数也不生效，数组形参实际上传入的是一个指向首个元素的指针
 //也不需要&，指针提供了地址，函数操作就是对数组实参操作
 void moveZeroes(int a[], int n){
     //定义慢指针l，快指针r
@@ -21,6 +21,8 @@ void moveZeroes(int a[], int n){
     }
 }
 int main(){
+    ios::sync_with_stdio(false); //关闭C++的cin/cout和C的scanf/printf的同步，让cin/cout速度更快
+    cin.tie(nullptr); //解除cin和cout之间的绑定，避免每次输入前都强制刷新输出缓冲区
     int n;
     cin >> n;
     int nums[n];
