@@ -14,11 +14,26 @@ void InsertSort(int a[], int n){
     }
 }
 int main(){
-    int n, k;
+    int n, k;  
     cin >> n >> k;
     int a[n];
     for(int i = 0; i < n; i++){
         cin >> a[i];
     }
     InsertSort(a, n);
+    if(k == 1) cout << a[0] << endl;
+    else{
+        int l = 1;
+        int r = 1;
+        for(; r < n; r++){
+            if(a[r] != a[r-1]){
+                l += 1;
+            }
+            if(l == k){
+                break;
+            }
+        }
+        if(l < k) cout << "NO RESULT" << endl;
+        else cout << a[r] << endl;
+    } 
 }
