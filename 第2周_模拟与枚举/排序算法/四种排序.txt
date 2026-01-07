@@ -1,0 +1,4 @@
+1. 冒泡排序：worst-O(n²); average-O(n²)
+2. 插入排序：worst-O(n²); average-O(n²)
+3. 归并排序：worst-O(nlogn); average-O(nlogn)
+4. 快速排序：worst-O(n²); average-O(nlogn)
