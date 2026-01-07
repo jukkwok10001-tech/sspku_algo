@@ -2,3 +2,4 @@
 2. 插入排序：worst-O(n²); average-O(n²)
 3. 归并排序：worst-O(nlogn); average-O(nlogn)
 4. 快速排序：worst-O(n²); average-O(nlogn)
+*很明显，现实工程应用中主要用归并或快速排序
