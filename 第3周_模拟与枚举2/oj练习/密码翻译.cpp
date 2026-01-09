@@ -15,7 +15,7 @@ void mod(vector<int>& a){
     //当数组a只有一个元素时，删去首个元素，数组变空值，继续追加索引会越界
     //因此需要额外处理，这里的函数返回空值即可
     else{
-        return ;
+        return ; //或者不写else语句也可以
     }
 }
 int main(){
