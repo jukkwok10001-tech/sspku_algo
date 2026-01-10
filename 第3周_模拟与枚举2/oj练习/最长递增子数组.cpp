@@ -1,30 +1,24 @@
 #include<iostream>
-#include<vector>
+#include<algorithm> //sort排序函数的头文件
 using namespace std;
 int main(){
     int n;
-    vector<int> counts;
     cin >> n;
-    vector<int> a;
+    int nums[n];
+    int counts[n-1];
     for(int i = 0; i < n; i++){
-        int num;
-        cin >> num;
-        a.push_back(num);
+        cin >> nums[i];
     }
-    if(n == 1) cout << 1;
-    else{
-        for(int i = 0; i < a.size(); i++){
-            int x = a[i];
-            int j = i + 1;
-            int count = 1;
-            while(x < a[j] && j < a.size()){
-                count++;
-                j++;
-            }
-            counts.push_back(count);
+    //不考虑nums的最后一个元素，其长度必定为1
+    for(int i = 0; i < n - 1; i++){
+        int l = i;
+        int count = 1;
+        while(nums[l] < nums[l+1]){
+            l++;
+            count++;
         }
-        for(int i = 0; i < counts.size(); i++){
-            cout << counts[i] << " ";
-        }
+        counts[i] = count;
     }
+    sort(counts, counts + n - 1);
+    cout << counts[n-2] << endl;
 }
