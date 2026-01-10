@@ -11,3 +11,4 @@ int main(){
     cin >> n;
     cout << fibonacci(n) << endl;
 }
+//当n较大时，递归运行速度很慢，此时根据递归公式使用for循环(动态规划)效率断崖式提高
