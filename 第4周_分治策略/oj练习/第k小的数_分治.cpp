@@ -7,8 +7,8 @@ int tmp[100010];
 void fun(int l, int r){
     //设置终止条件
     if(l >= r) return;
-    int mid = (l + r) / 2;
     //无限二分
+    int mid = (l + r) / 2;
     fun(l, mid);
     fun(mid+1, r);
     //治理
